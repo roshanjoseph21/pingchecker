@@ -1,0 +1,100 @@
+body {
+    margin-top: 20vh;
+    font-family: Open Sans, sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 10vmin;
+    margin: 5vh;
+    text-align: center;
+}
+.probes-container {
+    border: solid #ccc;
+    border-width: 1px 1px 0;
+    display: flex;
+    width: 80vw;
+    margin: 5vh auto;
+    flex-direction: row-reverse;
+}
+.probes {
+    flex: 1 1 auto;
+    overflow: hidden;
+    padding: 4px 8px 0;
+    height: 75px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-right: -1px;
+    white-space: nowrap;
+}
+.probe {
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+.probe.removing {
+    transition: margin-left .5s .5s;
+    margin-left: -30px;
+}
+.bar-container {
+    flex: 0 0 auto;
+    vertical-align: bottom;
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.bar {
+    margin: 0 auto;
+    width: 10px;
+    height: 0px;
+    transition: height .1s ease-out;
+}
+.bar.adjusting {
+    transition: height 1s ease-in-out;
+}
+.ms {
+    flex: 0 0 auto;
+    font-size: 11px;
+    white-space: nowrap;
+}
+.latest {
+    height: 81px;
+    font-size: 60px;
+    margin-top: -2px;
+    padding: 0 5px 0 10px;
+    flex: 0 0 160px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.latest .number {
+    text-align: right;
+    font-weight: 800;
+}
+.latest .number.four-digits {
+    font-size: 45px;
+    line-height: 93px;
+}
+.latest .unit {
+    font-size: 40%;
+    padding-left: 4px;
+}
+
+p {
+    width: 80vw;
+    margin: 1em auto;
+    text-align: center;
+    line-height: 150%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4em;
+    color: #ddd;
+}
+
+@media only screen and (max-width: 640px) {
+    .probes-container {
+        display: block;
+    }
+}
